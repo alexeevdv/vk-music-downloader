@@ -53,8 +53,6 @@ var init = function(){
             button.addEventListener("click", function(event){
                 event.preventDefault();
                 event.stopPropagation();
-                console.log(url);
-                console.log(filename);
                 chrome.runtime.sendMessage({
                     extension: "vk-music-downloader",
                     action: "download",
