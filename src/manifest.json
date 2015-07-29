@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name" : "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "0.0.2",
+    "permissions": [
+        "downloads"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "icons": {
+        "128": "128x128.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://vk.com/*"
+        ],
+        "css": [
+            "styles.css"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }]
+}

@@ -1,0 +1,14 @@
+{
+    "appName": {
+        "message": "Vkontakte music downloader",
+        "description": "The title of the application, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "This plugin adds new elements into vk.com user interface which allow you to download music on your computer",
+        "description": "The description of the application, displayed in the web store"
+    },
+    "Download": {
+        "message": "Download",
+        "description": "Download button text"
+    }
+}
