@@ -40,9 +40,15 @@ var init = function(){
             var filename = div.querySelector('.title_wrap b a').innerHTML;
             filename += " - ";
             filename += div.querySelector('.title_wrap .title').innerHTML;
+            // trim
             filename = filename.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            // strip_tags
             filename = filename.replace(/<\/?[^>]+(>|$)/g, "");
+            filename = filename.replace("&amp;", "&");
+            filename = filename.replace(/[:\"\\\/]+/g, '_');            
             filename += ".mp3";
+
+            console.log(filename);
 
             var wrapper = document.createElement('div');
             wrapper.innerHTML = "<div onmouseover=\"showTooltip(this, {text: '" + chrome.i18n.getMessage("Download") + "', showdt: 0, black: 1, shift: [9, 4, 0]});\" class='audio_download_wrap fl_r'><div class='audio_download'></div></div>";
